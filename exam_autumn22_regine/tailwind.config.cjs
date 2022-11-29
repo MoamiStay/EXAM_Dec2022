@@ -16,7 +16,7 @@ module.exports = {
         darkBlue: "#293F57",
         body: "#E6E6E6",
         main: "#FAFAFA",
-        white: "#FFFFFF"
+        white: "rgb(250, 250, 250)"
       }
     },
   },
