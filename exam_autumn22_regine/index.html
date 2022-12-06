@@ -3,26 +3,111 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./media/css/all.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
     <title>Homepage</title>
   </head>
+
   <body class="bg-body">
     <main class="bg-main max-w-4xl mx-auto">
     <nav class="relative container mx-auto p-6">
       <div class="flex items-center justify-between">
-        <div class="pt-2">
-          <img src="./media/img/logo.png" alt="Logo">
+        <div class="pt-2 logo-size">
+          <img class="max-w-full" src="./media/img/logo.png" alt="Logo">
         </div>
-          <input
-            type="text"
-            name="search"
-            id="search"
-            className="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            placeholder="Search.."
-        />
-        <div>login button/link</div>
+<form>   
+    <div class="hidden md:flex relative">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </div>
+        <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Search.." required>
+    </div>
+</form>
+        <a href="./html/login.html"><button>login</button></a>
+        <div class="hidden md:flex">
+        <p>43 999 <i class="fa-solid fa-coins"></i></p>
+        <p>NEW</p>
+        <a href="#"><img src="profile" alt="profile image">Profile</a>
+      </div>
       </div>
     </nav>
+
+    <nav class="md:hidden fixed inset-x-0 bottom-0 p-3 bg-brightRed">
+      <div class="flex items-center justify-between px-3 py-4">
+        <a href="./html/createnew.html">NEW<i class="fa-solid fa-circle-plus"></i></a>
+        <a href="./index.html">HOME<i class="fa-solid fa-house"></i></a>
+        <a href="./html/messages.html">MESSAGES<i class="fa-regular fa-message"></i></a>
+      </div>
+    </nav>
+    <section class="p-6">
+
+  <form>   
+    <div class="md:hidden relative">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </div>
+        <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Search.." required>
+    </div>
+  </form>
+
+      <h3 class="headline-text">Got something worth auctioning?</h3>
+      <a href="./html/createnew.html"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add new listing</button></a>
+      <img src="./media/img/birds1.jpg" alt="painting of two birds on a tree">
+      <h3 class="copytext">Sign up and get started today!</h3>
+      <a href="./html/register.html"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign up</button></a>
+      <img src="feather" alt="">
+      <img src="./media/img/birds2.jpeg" alt="painting of two birds on a tree">
+      <h2>Recent Listings</h2>
+      <div id="output"></div>
+      <img src="feather" alt="">
+      <img src="./media/img/birds3.jpg" alt="painting of two birds on a tree">
+      <img src="feather" alt="">
+      <h2>Articles</h2>
+      <section class="">
+        <div class="bg-article border-gray-500 rounded-lg p-2">
+          <a href="#">
+            <div>
+          <h2 class="headline-text underline">Headline</h2>
+          <p class="copytext">copytext copytext copytext copytext copytextcopytext copytext copytext copytextcopytext</p>
+            </div>
+          </a>
+        </div>
+
+                <div class="bg-article border-gray-500 rounded-lg p-2">
+          <a href="#">
+            <div>
+          <h2 class="headline-text underline">Headline</h2>
+          <p class="copytext">copytext copytext copytext copytext copytextcopytext copytext copytext copytextcopytext</p>
+            </div>
+          </a>
+        </div>
+
+                <div class="bg-article border-gray-500 rounded-lg p-2">
+          <a href="#">
+            <div>
+          <h2 class="headline-text underline">Headline</h2>
+          <p class="copytext">copytext copytext copytext copytext copytextcopytext copytext copytext copytextcopytext</p>
+            </div>
+          </a>
+        </div>
+
+                <div class="bg-article border-gray-500 rounded-lg p-2">
+          <a href="#">
+            <div>
+          <h2 class="headline-text underline">Headline</h2>
+          <p class="copytext">copytext copytext copytext copytext copytextcopytext copytext copytext copytextcopytext</p>
+            </div>
+          </a>
+        </div>
+
+      </section>
+    </section>
     </main>
+    <footer class="bg-darkRed max-w-4xl mx-auto">
+      <p>This is footer content</p>
+    </footer>
   </body>
 </html>
