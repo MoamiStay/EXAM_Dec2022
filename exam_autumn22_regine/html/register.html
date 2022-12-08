@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7298bdb0c3.js" crossorigin="anonymous"></script>
+    <script src="../src/modules/register.js" type="module" defer></script>
     <title>Homepage</title>
   </head>
 
@@ -30,27 +31,35 @@
             <div class="mt-4">
                 <div>
                     <label class="block" for="Name">Username<label>
-                            <input type="text" placeholder="Name"
+                            <input type="text" id="username" placeholder="Name" 
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
+                <span id="userError" class="text-xs text-red-400"></span>
                 <div class="mt-4">
                     <label class="block" for="email">Email<label>
-                            <input type="text" placeholder="Email"
+                            <input type="text" id="email" placeholder="Email"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
+                <span id="emailError" class="text-xs text-red-400"></span>
+                                    <label class="block" for="Name">Avatar<label>
+                            <input type="text" id="avatar" placeholder="Img link"
+                                class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+                </div>
+                <span id="avatarError" class="text-xs text-red-400"></span>
                 <div class="mt-4">
                     <label class="block">Password<label>
-                            <input type="password" placeholder="Password"
+                            <input type="password" id="password" placeholder="Password"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
+                <span id="passError" class="text-xs text-red-400"></span>
                 <div class="mt-4">
                     <label class="block">Confirm Password<label>
-                            <input type="password" placeholder="Password"
+                            <input type="password" id="confPass" placeholder="Password"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
-                <span class="text-xs text-red-400">Password must be same!</span>
+                <span id="outMsg" class="text-xs text-red-400"></span>
                 <div class="flex">
-                    <button class="w-full px-6 py-2 mt-4 bg-blue-600 rounded-lg hover:bg-blue-900">Create
+                    <button id="submitButton" class="w-full px-6 py-2 mt-4 bg-blue-600 rounded-lg hover:bg-blue-900">Create
                         Account</button>
                 </div>
                 <div class="mt-6 text-grey-dark">
