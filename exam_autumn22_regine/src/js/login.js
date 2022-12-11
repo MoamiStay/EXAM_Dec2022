@@ -1,7 +1,6 @@
 import { apiUrl } from '../modules/urls.js';
 import { homeLoggedIn } from "../modules/homepage.js";
-
-const link = apiUrl + "api/v1/auction/auth/login";
+const loginEndpoint = "api/v1/auction/auth/login";
 
 
 const getEmail = document.querySelector("#exampleFormControlInput1");
@@ -10,9 +9,9 @@ const loginBtn = document.querySelector("#loginBtn");
 const header = document.querySelector("header");
 const loginForm = document.querySelector("section#login");
 
-async function loginUser(url, userData) {
+async function loginUser(url, endpoint, userData) {
     try {
-        console.log(url, userData);
+        console.log(url, endpoint, userData);
         const postData = {
             method: "POST",
             headers: {
@@ -20,7 +19,7 @@ async function loginUser(url, userData) {
             },
             body: JSON.stringify(userData),
         };
-        const response = await fetch(url, postData);
+        const response = await fetch(url + endpoint, postData);
         // console.log(response);
         const json = await response.json();
         // console.log(json);
@@ -52,6 +51,6 @@ loginBtn.addEventListener("click", (event) => {
         email: email,
         password: password,
     }
-    loginUser(link, userToLogin);
+    loginUser(apiUrl, loginEndpoint, userToLogin);
 });
 

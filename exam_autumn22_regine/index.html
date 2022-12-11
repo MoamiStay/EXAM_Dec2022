@@ -30,9 +30,9 @@
         <a id="loginBtn" href="./html/login.html"><button>login</button></a>
         <button class="hidden" id="logoutBtn">logout</button>
         <div class="hidden md:flex">
-        <p>... <i class="fa-solid fa-coins"></i></p>
-        <p>NEW</p>
-        <!-- <a href="#"><img src="profile" alt="profile image">Profile</a> -->
+        <span id="credits">... <i class="fa-solid fa-coins"></i></span>
+        <span>NEW</span>
+        <a id="pfimg" class="hidden w-15 h-15 rounded-full" href="./html/profile.html">Profile</a>
       </div>
       </div>
     </nav>
@@ -56,8 +56,8 @@
 
   <div id="loggedInHome" class="hidden mt-8 grid md:grid-cols-2 gap-10">
   <div class="p-6">
-      <h3 class="headline-text">Sign up and get startet!</h3>
-      <a href="./html/createnew.html"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Get startet</button></a>
+      <h3 class="headline-text">Got something worth auctioning?</h3>
+      <a href="./html/createnew.html"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create listing</button></a>
   </div>
   <div class="p-6">
     <p>Quote something nice here</p>
@@ -72,7 +72,7 @@
     <section id="loggedOutHome" class="p-6">
       <div class="grid grid-cols-2 justify-between">
         <div>
-        <h3 class="headline-text">Sign up and get startet!</h3>
+        <h3 class="headline-text">Sign up and get 1000 free credits to get startet!</h3>
         <a href="./html/createnew.html"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Get startet</button></a>
         </div>
         <div class="max-h-10">
@@ -87,9 +87,6 @@
     <img src="./media/img/birds2.jpeg" alt="painting of two birds on a tree">
     <div>
       <h2>Recent Listings</h2>
-      <div id="output">
-
-      </div>
     </div>
       
     <img src="./media/img/birds3.jpg" alt="painting of two birds on a tree">
@@ -138,6 +135,11 @@
 
     </section>
     </main>
+
+    <section>
+      <div id="output">
+      </div>    
+    </section>
 
     <footer class="bg-darkRed max-w-4xl mx-auto">
       <p>This is footer content</p>
