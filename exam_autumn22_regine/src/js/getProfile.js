@@ -21,7 +21,9 @@ export async function getProfile(url, endpoint) {
         // console.log(json);
         if (response.ok) {
             const avatar = json.avatar;
-            localStorage.setItem("avatar", avatar)
+            const credits = json.credits;
+            localStorage.setItem("avatar", avatar);
+            localStorage.setItem("credits", credits);
         } else {
             out.innerHTML = "Did not work";
         }

@@ -13,6 +13,7 @@ const emailError = document.querySelector("#emailError");
 const avatarError = document.querySelector("#avatarError");
 const passError = document.querySelector("#passError");
 const outMsg = document.querySelector("#outMsg");
+const registrationForm = document.querySelector("#registration-form");
 
 const submitButton = document.querySelector("#submitButton");
 
@@ -31,20 +32,24 @@ async function registerUser(url, endpoint, userData) {
         console.log(response);
         const json = await response.json();
         console.log(json);
-        if (json.message === "Profile already exists") {
-            outMsg.innerHTML = "Profile already exists";
-        } else if (response.ok) {
+        if (response.ok) {
         const userName = json.name;
         localStorage.setItem("userName", userName);
-            outMsg.innerHTML = "Registration successful";
+        registrationForm.innerHTML = `
+        <div>
+        <h2>Registration successful</h2>
+        <div><a href="./login.html">Login</a></div>
+        </div>
+        `;
+        } else if (json.errors[0].message === "Profile already exists") {
+            outMsg.innerHTML = "Profile already exists";
         } else {
-            outMsg.innerHTML = "Registration unsuccessful";
+        outMsg.innerHTML = "Registration unsuccessful";
         }
     } catch (error) {
         console.log(error);
     }
 };
-
 
 submitButton.addEventListener("click", (event) => {
     event.preventDefault();

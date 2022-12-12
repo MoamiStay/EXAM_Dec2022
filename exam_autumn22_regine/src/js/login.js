@@ -2,14 +2,13 @@ import { apiUrl } from '../modules/urls.js';
 import { homeLoggedIn } from "../modules/homepage.js";
 const loginEndpoint = "api/v1/auction/auth/login";
 
-
 const getEmail = document.querySelector("#exampleFormControlInput1");
 const getPassword = document.querySelector("#exampleFormControlInput2");
 const loginBtn = document.querySelector("#loginBtn");
-const header = document.querySelector("header");
-const loginForm = document.querySelector("section#login");
+const loginContent = document.querySelector("#login-content");
 
-async function loginUser(url, endpoint, userData) {
+
+export async function loginUser(url, endpoint, userData) {
     try {
         console.log(url, endpoint, userData);
         const postData = {
@@ -20,19 +19,19 @@ async function loginUser(url, endpoint, userData) {
             body: JSON.stringify(userData),
         };
         const response = await fetch(url + endpoint, postData);
-        // console.log(response);
+        console.log(response);
         const json = await response.json();
-        // console.log(json);
+        console.log(json);
         // console.log(json.accessToken);
         const userName = json.name;
         const accessToken = json.accessToken;
         localStorage.setItem("accessToken", accessToken);
         localStorage.setItem("userName", userName);
         if (response.ok) {
-            homeLoggedIn()
-        // window.location.href = "../../index.html";
+        window.location.href = "../index.html";
+        homeLoggedIn()
         } else {
-            // loginContent.innerHTML = "Password or Email is invalid";
+        loginContent.innerHTML = "Password or Email is invalid";
         }
     } catch (error) {
         console.log(error);
