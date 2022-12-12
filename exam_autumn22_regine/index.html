@@ -10,14 +10,15 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
     <title>Homepage</title>
   <script src="src/js/main.js" type="module" defer></script>
+  <!-- <script src="./src/js/every-page.js" type="module" defer></script> -->
   </head>
 
   <body class="bg-body">
     <main class="bg-main max-w-4xl mx-auto">
     <nav class="relative container mx-auto p-6">
-      <div class="flex items-center justify-between">
-        <div class="pt-2 logo-size">
-          <img class="max-w-full" src="./media/img/logo.png" alt="Logo">
+      <div class="flex justify-between">
+        <div class="pt-2 flex justify-between">
+          <a href="./index.html"><img class="logo-size max-w-full" src="./media/img/logo.png" alt="Logo"></a>
         </div>
 <form>   
     <div class="hidden md:flex relative">
@@ -31,8 +32,8 @@
         <button class="hidden" id="logoutBtn">logout</button>
         <div class="hidden md:flex">
         <span id="credits">... <i class="fa-solid fa-coins"></i></span>
-        <span>NEW</span>
-        <a id="pfimg" class="hidden w-15 h-15 rounded-full" href="./html/profile.html">Profile</a>
+        <a class="mx-3.5" href="./html/createnew.html"><i class="fa-solid fa-plus"></i></a>
+        <div id="fimg" class="h-10 w-10 object-fill mx-3.5"><a href="./html/profile.html">Profile</a></div>
       </div>
       </div>
     </nav>
@@ -41,7 +42,7 @@
       <div class="flex items-center justify-between px-3 py-4">
         <a href="./html/createnew.html">NEW<i class="fa-solid fa-circle-plus"></i></a>
         <a href="./index.html">HOME<i class="fa-solid fa-house"></i></a>
-        <a href="./html/messages.html">MESSAGES<i class="fa-regular fa-message"></i></a>
+        <div id="pfimg-mob" class="md:hidden h-10 w-10 object-fill mx-3.5"></div>
       </div>
     </nav>
 

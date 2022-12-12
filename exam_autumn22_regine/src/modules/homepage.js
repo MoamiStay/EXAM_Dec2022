@@ -33,7 +33,3 @@ export function homeLoggedOut() {
         console.log("You are still signed in");
     }
 }
-
-export function profileImg(img) {
-    pfimg.innerHTML = `<img src="${img}" alt="profile image">Profile`
-}

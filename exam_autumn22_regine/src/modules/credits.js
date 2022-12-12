@@ -4,34 +4,33 @@ const username = localStorage.getItem("username");
 
 
 
-export async function getCredits(url, endpoint, amount, user) {
+export async function getCredits(user) {
     try {
         const postData = {
             method: "PUT",
             headers: {
                 "content-Type": "application/json",
             },
-            body: JSON.stringify(amount),
+            body: JSON.stringify(
+                {
+                    "credits": 1000
+                }
+            ),
         };
-        const response = await fetch(url + endpoint + user, amount);
+        const response = await fetch("https://nf-api.onrender.com/api/v1/auction/profiles/" + user);
         console.log(response);
         const json = await response.json();
         console.log(json);
-        localStorage.setItem("credits", 1000)
-        const credits = localStorage.getItem("credits")
+        //localStorage.setItem("credits", 1000)
+        //const credits = localStorage.getItem("credits")
     } catch (error) {
         console.log(error);
-    }
 };
-
-{
-    "credits": "1000"
-}
-
 
         const amount = {
         credits: 1000,
     }
 
+}
 
-getCredits(apiUrl, profileEndpoint, 1000, username)
+getCredits()

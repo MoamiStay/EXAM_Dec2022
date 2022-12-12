@@ -1,23 +1,19 @@
-import { apiUrl } from '../modules/urls.js';
 const out = document.querySelector("#output");
 
 export async function getPosts(url, endpoint) {
     try {
-        // console.log(url + endpoint);
         const postData = {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
             },
         };
-        const response = await fetch(url + endpoint);
+        const response = await fetch(url + endpoint, postData);
         // console.log(response);
         const json = await response.json();
         // console.log(json);
         if (response.ok) {
-            // homeLoggedIn()
             posts(json)
-        // window.location.href = "../../index.html";
         } else {
             // loginContent.innerHTML = "Password or Email is invalid";
         }
@@ -31,7 +27,7 @@ export async function posts(listings) {
     // console.log(listings[i].media);
     out.innerHTML = "";
        for (let i = 0; i < 100; i++ ) {
-        console.log(listings[i]);
+        // console.log(listings[i]);
         out.innerHTML += `
  <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
     <a href="#">

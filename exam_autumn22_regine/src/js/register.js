@@ -1,6 +1,7 @@
 import { apiUrl } from '../modules/urls.js';
 const registerEndpoint = "api/v1/auction/auth/register";
 
+
 const getUser = document.querySelector("#username"); 
 const getEmail = document.querySelector("#email");
 const getAvatar = document.querySelector("#avatar");

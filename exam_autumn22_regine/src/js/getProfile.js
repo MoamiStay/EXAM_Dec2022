@@ -1,15 +1,12 @@
 import { apiUrl } from '../modules/urls.js';
-import { profileImg } from '../modules/homepage.js'
+// import { profileImg } from '../js/every-page.js';
 const user = localStorage.getItem("userName");
 const token = localStorage.getItem("accessToken");
 const profileEndpoint = "api/v1/auction/profiles/" + user;
 const out = document.querySelector("#output");
 
 
-console.log(apiUrl + profileEndpoint);
-
-
-async function getProfile(url, endpoint) {
+export async function getProfile(url, endpoint) {
     try {
         const postData = {
             method: "GET",
@@ -18,12 +15,13 @@ async function getProfile(url, endpoint) {
               Authorization: `Bearer ${token}`,
             },
         };
-        const response = await fetch(url + endpoint);
-        console.log(response);
+        const response = await fetch(url + endpoint, postData);
+        // console.log(response);
         const json = await response.json();
-        console.log(json);
+        // console.log(json);
         if (response.ok) {
-            // posts(json)
+            const avatar = json.avatar;
+            localStorage.setItem("avatar", avatar)
         } else {
             out.innerHTML = "Did not work";
         }
@@ -31,7 +29,5 @@ async function getProfile(url, endpoint) {
         console.log(error);
     } 
 };
-getProfile(apiUrl, profileEndpoint)
 
-
-// profileImg(listing.avatar)
+getProfile(apiUrl, profileEndpoint);
