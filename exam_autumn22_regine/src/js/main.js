@@ -4,8 +4,10 @@ import { logoutBtn } from "../modules/homepage.js";
 import { getPosts } from "../modules/output.js";
 import { apiUrl } from '../modules/urls.js';
 import { getProfile } from './getProfile.js';
+const output = document.querySelector("#output");
 
-const listingsEndpoint = "api/v1/auction/listings";
+
+const listingsEndpoint = "api/v1/auction/listings/?_seller=true&_bids=true&_active=true&sortOrder=desc";
 
 if (localStorage.getItem("accessToken") === null) {
     homeLoggedOut()
@@ -20,7 +22,7 @@ logoutBtn.addEventListener("click", (event) => {
 });
 
 // Show list of listings to browse
-getPosts(apiUrl, listingsEndpoint);
+getPosts(apiUrl, listingsEndpoint, output);
 
 
 

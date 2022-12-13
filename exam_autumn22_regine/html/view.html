@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7298bdb0c3.js" crossorigin="anonymous"></script>
         <script src="../src/js/every-page.js" type="module" defer></script>
+        <script src="../src/js/view-listing.js" type="module" defer></script>
     <title>View Listing</title>
   </head>
 
@@ -45,7 +46,11 @@
     </nav>
     
 <section class="h-screen p-6">
-<div>empty div</div>
+<div id="output"></div>
+<div class="flex">
+       <input type="number" id="bid-amount" class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Bid amount" required>
+       <a href="#"><button id="make-bid" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Bid</button></a>
+</div>
 </section>
 
     </main>
