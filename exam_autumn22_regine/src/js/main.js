@@ -4,10 +4,12 @@ import { logoutBtn } from "../modules/homepage.js";
 import { getPosts } from "../modules/output.js";
 import { apiUrl } from '../modules/urls.js';
 import { getProfile } from './getProfile.js';
+import { filterPosts } from '../modules/output.js';
+// import { allPosts } from "../modules/output.js";
 const output = document.querySelector("#output");
+const searchBar = document.querySelector("#default-search");
 
-
-const listingsEndpoint = "api/v1/auction/listings/?_seller=true&_bids=true&_active=true&sortOrder=desc";
+const listingsEndpoint = "api/v1/auction/listings/?_seller=true&_bids=true&_active=true&sortOrder=asc";
 
 if (localStorage.getItem("accessToken") === null) {
     homeLoggedOut()
@@ -24,6 +26,9 @@ logoutBtn.addEventListener("click", (event) => {
 // Show list of listings to browse
 getPosts(apiUrl, listingsEndpoint, output);
 
+searchBar.addEventListener("keyup", (event) => {
+  console.log(searchBar.value);
+  filterPosts(output)});
 
 
 // Get profile Img icon and credits count for header on index.html.

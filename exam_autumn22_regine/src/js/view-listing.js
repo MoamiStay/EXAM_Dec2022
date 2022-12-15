@@ -8,6 +8,7 @@ let id = params.get("id");
 const listingEndpoint = "api/v1/auction/listings/" + id + "?_seller=true&_bids=true";
 const out = document.querySelector("#output");
 const title = document.querySelector("title");
+const bidError = document.querySelector("#bid-error");
 
 
 export async function getPost(url, endpoint) {
@@ -19,9 +20,9 @@ export async function getPost(url, endpoint) {
             },
         };
         const response = await fetch(url + endpoint, postData);
-        console.log(response);
+        // console.log(response);
         const json = await response.json();
-        console.log(json);
+        // console.log(json);
         if (response.ok) {
             title.innerHTML = json.title;
             post(json);
@@ -41,7 +42,9 @@ function post(data) {
     dates(data.endsAt);
 
     let highBid = 0;
-    for (let bid of data.bids) { highBid = bid;}
+    for (let bid of data.bids) { 
+        if (bid.amount > highBid) {highBid = bid.amount} else { continue }
+    }
     out.innerHTML = `
      <div class="grid md:grid-cols-2 m-3 h-32 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
 
@@ -58,7 +61,7 @@ function post(data) {
  
     <div class="p-5">
         <h3 class="text-xl copytext my-1.5">Ends: ${`${day}. ${month}, ${year}`}</h3>
-        <h5 class="mb-2 text-2xl copytext font-bold tracking-tight text-gray-900 dark:text-white">Highest bid: ${highBid.amount + ` <i class="fa-solid fa-coins"></i>`}</h5>
+        <h5 class="mb-2 text-2xl copytext font-bold tracking-tight text-gray-900 dark:text-white">Highest bid: ${highBid + ` <i class="fa-solid fa-coins"></i>`}</h5>
         <p>${data._count.bids} people has bid on this item</p>
 
     </div>
@@ -92,7 +95,7 @@ export async function bidOnListing(url, endpoint, bid) {
         if (response.ok) {
             console.log("it went well");
         } else {
-        // loginContent.innerHTML = "Password or Email is invalid";
+        bidError.innerHTML = "You can only place a bid if it is higher than the current bid";
         }
     } catch (error) {
         console.log(error);

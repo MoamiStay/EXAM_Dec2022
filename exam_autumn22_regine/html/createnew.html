@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7298bdb0c3.js" crossorigin="anonymous"></script>
     <script src="../src/js/every-page.js" type="module" defer></script>
+    <script src="../src/js/create-listing.js" type="module" defer></script>
     <title>Create listing</title>
   </head>
 
@@ -61,36 +62,33 @@
             <div class="mt-4">
                 <div>
                     <label class="block" for="Title">Title<label>
-                            <input type="text" placeholder="Title"
+                            <input id="listing-title" type="text" placeholder="Title"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <div class="mt-4">
                     <label class="block" for="Image">Add image<label>
-                            <input type="text" placeholder="Image"
+                            <input id="listing-media" type="text" placeholder="Image"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <div class="mt-4">
                     <label class="block" for="Description">Description<label>
-                            <input type="text" placeholder="Description"
+                            <input id="listing-description" type="text" placeholder="Description"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
-                <!-- 
-                    https://flowbite.com/docs/plugins/datepicker/
-                -->
                 <div class="mt-4">
                     <label class="block">Deadline<label>
-                            <input type="datetime-local" id="Deadline" name="Deadline" placeholder="Deadline" value="#" min="#" max="#"
+                            <input type="datetime-local" id="listing-deadline" name="Deadline" placeholder="Deadline" value="" min="1" max="31"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
-                <span class="text-xs text-red-400">Enter a valid date</span>
+                <span class="text-xs text-red-400"></span>
                                 
                 <div class="mt-4">
                     <label class="block" for="Tags">Add tags<label>
-                            <input type="text" placeholder="Tags"
+                            <input id="listing-tags" type="text" placeholder="Tags"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <div class="flex">
-                    <button class="w-full px-6 py-2 mt-4 bg-blue-600 rounded-lg hover:bg-blue-900">Post
+                    <button id="post-listing" class="w-full px-6 py-2 mt-4 bg-blue-600 rounded-lg hover:bg-blue-900">Post
                         listing</button>
                 </div>
             </div>
