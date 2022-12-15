@@ -1,5 +1,5 @@
 import { apiUrl } from '../modules/urls.js';
-import { getProfile } from './getProfile.js';
+import { getProfile } from './myProfile.js';
 const pfImg = document.querySelector("#pfimg");
 const pfImgMob = document.querySelector("#pfimg-mob");
 const user = localStorage.getItem("userName");

@@ -3,7 +3,7 @@ import { homeLoggedOut } from "../modules/homepage.js";
 import { logoutBtn } from "../modules/homepage.js";
 import { getPosts } from "../modules/output.js";
 import { apiUrl } from '../modules/urls.js';
-import { getProfile } from './getProfile.js';
+import { getProfile } from './myProfile.js';
 import { filterPosts } from '../modules/output.js';
 // import { allPosts } from "../modules/output.js";
 const output = document.querySelector("#output");
@@ -38,8 +38,7 @@ const user = localStorage.getItem("userName");
 const myCredits = document.querySelector("#credits");
 const profileEndpoint = "api/v1/auction/profiles/" + user;
 
-export async function profileImg() {
-    getProfile(apiUrl, profileEndpoint);
+    async function profileImg() {
     const img = localStorage.getItem("avatar");
     const credits = localStorage.getItem("credits");
     myCredits.innerHTML = credits + ` <i class="fa-solid fa-coins"></i>`;
@@ -51,4 +50,5 @@ export async function profileImg() {
     `
 }
 
+getProfile(apiUrl, profileEndpoint);
 profileImg()
