@@ -28,7 +28,7 @@ export async function getPosts(url, endpoint, out) {
     filterPosts(out);
 };
 
-
+// writes out all listings
 export async function posts(out, listings) {
     out.innerHTML = "";
        for (let i = 0; i < 100; i++ ) {
@@ -36,7 +36,7 @@ export async function posts(out, listings) {
     let highBid = 0;
     for (let bid of listings[i].bids) { 
         if (bid.amount > highBid) {highBid = bid.amount} else { continue }
-    }
+    } if (listings[i].media == false ) { continue };
         out.innerHTML += `
  <div class="m-3 h-32 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
     <a href="./html/view.html?id=${listings[i].id}">
@@ -79,7 +79,6 @@ export function dates(date) {
 // Tags needs to be fully written before they show up. EXAMPLE: "veh" wont show results that include a "vehicle" tag. 
 export async function filterPosts(out) {
   try {
-    // console.log(allPosts);
     out.innerHTML = "";
     
       for (let i = 0; i < 100; i++ ) {

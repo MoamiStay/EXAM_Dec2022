@@ -5,6 +5,7 @@ const loggedIn = document.querySelector("#loggedInHome");
 const credits = document.querySelector("#credits");
 const pfimg = document.querySelector("#pfimg");
 const createNew = document.querySelector("#create-new");
+const mobNav = document.querySelector("#mob-nav");
 
 
 export function homeLoggedIn() {
@@ -17,16 +18,18 @@ export function homeLoggedIn() {
         pfimg.classList.remove("hidden");
         credits.classList.remove("hidden");
         createNew.classList.remove("hidden");
+        mobNav.classList.remove("hidden");
     } else {
         console.log("Not signed in");
     }
-}
+};
 
 export function homeLoggedOut() {
-    // window.location.href = "../../index.html";
     localStorage.removeItem("accessToken");
     localStorage.removeItem("userName");
     localStorage.removeItem("avatar");
+    localStorage.removeItem("credits");
+    localStorage.removeItem("email");
     if (localStorage.getItem("accessToken") === null) {
         console.log("You are logged out");
         loginBtn.classList.remove("hidden");
@@ -36,7 +39,8 @@ export function homeLoggedOut() {
         pfimg.classList.add("hidden");
         credits.classList.add("hidden");
         createNew.classList.add("hidden");
+        mobNav.classList.add("hidden");
     } else {
         console.log("You are still signed in");
     }
-}
+};

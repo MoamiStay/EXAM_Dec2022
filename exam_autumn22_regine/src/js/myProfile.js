@@ -47,9 +47,9 @@ export async function getProfile(url, endpoint) {
 };
 getProfile(apiUrl, profileEndpoint);
 
-// const getEmail = document.querySelector("#email").innerHTML = localStorage.getItem("email");
-// const getUsername = document.querySelector("#username").innerHTML = localStorage.getItem("userName");
-// const getCredits = document.querySelector("#my-credits").innerHTML = "Available credits: " + localStorage.getItem("credits") + " <i class='fa-solid fa-coins'>";
+const getEmail = document.querySelector("#email").innerHTML = localStorage.getItem("email");
+const getUsername = document.querySelector("#username").innerHTML = localStorage.getItem("userName");
+const getCredits = document.querySelector("#my-credits").innerHTML = "Available credits: " + localStorage.getItem("credits") + " <i class='fa-solid fa-coins'>";
 
 
 

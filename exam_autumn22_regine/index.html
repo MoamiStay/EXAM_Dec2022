@@ -16,43 +16,43 @@
     <main class="bg-main max-w-4xl mx-auto">
     <nav class="relative container mx-auto p-6">
       <div class="flex justify-between">
-        <div class="pt-2 flex justify-between">
+        <div class="pt-2 flex">
           <a href="./index.html"><img class="logo-size max-w-full" src="./media/img/logo.png" alt="Logo"></a>
         </div>
 
-        <a id="loginBtn" href="./html/login.html"><button>login</button></a>
-        <div class="hidden md:flex">
-        <span id="credits"></span>
-        <a id="create-new" class="mx-3.5" href="./html/createnew.html"><i class="fa-solid fa-plus"></i></a>
-        <div id="pfimg" class="h-10 w-10 object-fill mx-3.5"><a href="./html/profile.html">Profile</a></div>
+        <div class="hidden block md:flex">
+          <span id="credits" class="my-3"></span>
+          <a id="create-new" class="flex flex-col items-center px-5" href="./html/createnew.html"><i class="fa-solid fa-plus text-xl"></i></a>
+          <div id="pfimg" class="h-10 w-10 object-fill mx-3.5"><a href="./html/profile.html">Profile</a></div>
       </div>
       </div>
-              <button class="hidden block w-full text-xs text-right" id="logoutBtn">logout</button>
+              <a id="loginBtn" class="copytext block w-full text-right px-5" href="./html/login.html"><button>Login <i class="fa-solid fa-arrow-right-to-bracket"></i></button></a>
+              <button class="hidden block copytext w-full text-xs text-right" id="logoutBtn" class="px-5">Logout</button>
     </nav>
 
-    <nav class="md:hidden fixed inset-x-0 bottom-0 p-3 bg-brightRed">
+    <nav id="mob-nav" class="md:hidden fixed inset-x-0 bottom-0 p-3 bg-brightRed text-white">
       <div class="flex items-center justify-between px-3 py-4">
-        <a href="./html/createnew.html">NEW<i class="fa-solid fa-circle-plus"></i></a>
-        <a href="./index.html">HOME<i class="fa-solid fa-house"></i></a>
+        <a href="./html/createnew.html" class="flex flex-col items-center"><i class="fa-solid fa-circle-plus text-2xl p-3"></i></a>
+        <a href="./index.html" class="flex flex-col items-center"><i class="fa-solid fa-house text-2xl"></i></a>
         <div id="pfimg-mob" class="md:hidden h-10 w-10 object-fill mx-3.5"></div>
       </div>
     </nav>
 
-      <form>   
-    <div class="relative">
+      <form class="p-6">   
+    <div class=" my-auto md:w-2/4">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
         </div>
-        <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Search.." required>
+        <input type="search" id="default-search" class="copytext w-full p-4 pl-10 text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Search tags or titles.." required>
     </div>
   </form>
 
   <div id="loggedInHome" class="hidden mt-8 grid md:grid-cols-2 gap-10">
   <div class="p-6">
-      <h3 class="headline-text">Got something worth auctioning?</h3>
+      <h3 class="headline-text text-2xl py-4">Got something worth auctioning?</h3>
       <a href="./html/createnew.html"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create listing</button></a>
   </div>
-  <div class="p-6">
+  <div class="p-6 hidden md:flex">
     <p>Quote something nice here</p>
     <p>Add another nice quote</p>
     <div class="h-20 w-10 object-fill mx-3.5"><img class="h-full w-full" src="./media/img/Asset 1ldpi.png" alt=""></div>
@@ -64,28 +64,16 @@
 
     <section id="loggedOutHome" class="p-6">
       <div class="grid grid-cols-2 justify-between">
-        <div>
-        <h3 class="headline-text">Sign up and get 1000 free credits to get startet!</h3>
+        <div class="p-6">
+        <h3 class="headline-text text-2xl p-4">Sign up and get 1000 free credits to get startet!</h3>
         <a href="./html/createnew.html"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Get startet</button></a>
-        </div>
-        <div class="max-h-10">
-          <img class="object-contain" src="./media/img/Asset 2ldpi.png" alt="">
         </div>
       </div>
     <img src="./media/img/birds1.jpg" alt="painting of two birds on a tree">
-      <div>
-        <h3 class="copytext">Something something</h3>
-        <a href="./html/register.html"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Something</button></a>
-      </div>
-    <img src="./media/img/birds2.jpeg" alt="painting of two birds on a tree">
-    <div>
-      <h2>Recent Listings</h2>
-    </div>
       
-    <img src="./media/img/birds3.jpg" alt="painting of two birds on a tree">
       
     <section>
-      <h2>Articles</h2>
+      <h2 class="p-4 mt-14 headline-text text-2xl">Articles</h2>
       <div class="grid md:grid-cols-2 gap-10">
         <div class="bg-article border-gray-500 rounded-lg p-2">
           <a href="#">
@@ -130,12 +118,21 @@
     </main>
 
     <section class="bg-main max-w-4xl mx-auto">
+          <div>
+      <h2 class="p-4 mt-14 headline-text text-2xl">Recent Listings</h2>
+    </div>
       <div id="output" class="grid md:grid-cols-3 gap-4">
+      <img class="mx-auto p-5" id="spinner" src="./media/spinner/spinner.gif" alt="spinner">
       </div>    
     </section>
 
-    <footer class="bg-darkRed max-w-4xl mx-auto">
-      <p>This is footer content</p>
+    <footer class="copytext bg-darkRed max-w-4xl mx-auto sm:pb-24 md:pb-3">
+      <p class="text-white p-3">Funded by Momis Nation 2022</p>
+      <p class="text-white p-3">Contact us: email@email.com</p>
+      <div class="flex justify-center">
+      <p class="text-white p-3">Privacy Policy </p>
+      <p class="text-white p-3">Terms and Conditions</p>
+      </div>
     </footer>
   </body>
 </html>

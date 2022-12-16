@@ -44,7 +44,7 @@ async function registerUser(url, endpoint, userData) {
         } else if (json.errors[0].message === "Profile already exists") {
             outMsg.innerHTML = "Profile already exists";
         } else {
-        outMsg.innerHTML = "Registration unsuccessful";
+        outMsg.innerHTML = "Registration unsuccessful. Please check that img link is a valid link";
         }
     } catch (error) {
         console.log(error);
@@ -83,15 +83,13 @@ function validateRegUser(user, userEmail, avatar, pass, secondPass) {
 
 if ( /^[a-z0-9_-]{3,16}$/.test(user)) {
     userToRegister["name"] = user;
-    // console.log("valid user");
-} else { userError.innerHTML = "Username must be at least 4 characters" };
+    console.log("valid user");
+} else { userError.innerHTML = "Username must be at least 3 characters and not include special signs exept _" };
 
 if ( /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(userEmail) && (userEmail.toLowerCase().endsWith("noroff.no" || userEmail.toLowerCase().endsWith("stud.noroff.no")))) {
     userToRegister["email"] = userEmail;
     // console.log("valid Email");
 } else { emailError.innerHTML = "Email must be a '@noroff.no' or '@stud.noroff.no' mail" };
-
-if (avatar) {userToRegister["avatar"] = avatar};
 
 if ( /^[a-z0-9_-]{8,18}$/.test(pass)) {
     if (pass === secondPass) {

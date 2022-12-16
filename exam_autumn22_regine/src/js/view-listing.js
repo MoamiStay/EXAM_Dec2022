@@ -9,7 +9,13 @@ const listingEndpoint = "api/v1/auction/listings/" + id + "?_seller=true&_bids=t
 const out = document.querySelector("#output");
 const title = document.querySelector("title");
 const bidError = document.querySelector("#bid-error");
+const mobileNav = document.querySelector("#mob-nav");
+const bidRes = document.querySelector("#bidRestriction");
 
+if (localStorage.getItem("accessToken") === null) {
+    mobileNav.classList.add("hidden");
+    bidRes.innerHTML = `<a class="text-xl underline copytext text-red-600" href="./login.html">Please log in to bid on this item</a>`;
+} else {"everything is ok"}
 
 export async function getPost(url, endpoint) {
     try {

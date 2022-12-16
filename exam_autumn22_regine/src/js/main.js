@@ -3,9 +3,7 @@ import { homeLoggedOut } from "../modules/homepage.js";
 import { logoutBtn } from "../modules/homepage.js";
 import { getPosts } from "../modules/output.js";
 import { apiUrl } from '../modules/urls.js';
-import { getProfile } from './myProfile.js';
 import { filterPosts } from '../modules/output.js';
-// import { allPosts } from "../modules/output.js";
 const output = document.querySelector("#output");
 const searchBar = document.querySelector("#default-search");
 
@@ -32,23 +30,9 @@ searchBar.addEventListener("keyup", (event) => {
 
 
 // Get profile Img icon and credits count for header on index.html.
-const pfImg = document.querySelector("#pfimg");
-const pfImgMob = document.querySelector("#pfimg-mob");
-const user = localStorage.getItem("userName");
-const myCredits = document.querySelector("#credits");
-const profileEndpoint = "api/v1/auction/profiles/" + user;
+// const img = localStorage.getItem("avatar");
+// const cred = localStorage.getItem("credits");
+const pfImg = document.querySelector("#pfimg").innerHTML = `<a href="./html/profile.html"><img class="h-full w-full rounded-full" src="${localStorage.getItem("avatar")} alt="profile img"></a>`
+const pfImgMob = document.querySelector("#pfimg-mob").innerHTML = `<a href="./html/profile.html"><img class="h-full w-full rounded-full" src="${localStorage.getItem("avatar")} alt="profile img"></a>`
+const myCredits = document.querySelector("#credits").innerHTML = `${localStorage.getItem("credits")} <i class="fa-solid fa-coins">`;
 
-    async function profileImg() {
-    const img = localStorage.getItem("avatar");
-    const credits = localStorage.getItem("credits");
-    myCredits.innerHTML = credits + ` <i class="fa-solid fa-coins"></i>`;
-    pfImg.innerHTML = `
-    <a href="./html/profile.html"><img class="h-full w-full rounded-full" src="${img} alt="profile img"></a> 
-    `
-    pfImgMob.innerHTML = `
-    <a href="./html/profile.html"><img class="h-full w-full rounded-full" src="${img} alt="profile img"></a> 
-    `
-}
-
-getProfile(apiUrl, profileEndpoint);
-profileImg()
