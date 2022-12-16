@@ -19,10 +19,9 @@ export async function loginUser(url, endpoint, userData) {
             body: JSON.stringify(userData),
         };
         const response = await fetch(url + endpoint, postData);
-        console.log(response);
+        // console.log(response);
         const json = await response.json();
-        console.log(json);
-        // console.log(json.accessToken);
+        // console.log(json);
         const userName = json.name;
         const accessToken = json.accessToken;
         localStorage.setItem("accessToken", accessToken);
@@ -41,8 +40,6 @@ export async function loginUser(url, endpoint, userData) {
 
 loginBtn.addEventListener("click", (event) => {
     event.preventDefault();
-    // loginContent.innerHTML = '<img src="#" alt"Loading...">';
-
     const email = getEmail.value.trim();
     const password = getPassword.value.trim();
 

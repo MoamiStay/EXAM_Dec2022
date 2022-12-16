@@ -11,6 +11,7 @@ const title = document.querySelector("title");
 const bidError = document.querySelector("#bid-error");
 const mobileNav = document.querySelector("#mob-nav");
 const bidRes = document.querySelector("#bidRestriction");
+const bidSuccess = document.querySelector("#bid-success");
 
 if (localStorage.getItem("accessToken") === null) {
     mobileNav.classList.add("hidden");
@@ -28,12 +29,12 @@ export async function getPost(url, endpoint) {
         const response = await fetch(url + endpoint, postData);
         // console.log(response);
         const json = await response.json();
-        // console.log(json);
+        console.log(json);
         if (response.ok) {
             title.innerHTML = json.title;
             post(json);
         } else {
-        // loginContent.innerHTML = "Password or Email is invalid";
+        loginContent.innerHTML = "Something is wrong";
         }
     } catch (error) {
         console.log(error);
@@ -57,10 +58,14 @@ function post(data) {
         <img class="rounded-t-lg w-full h-2/4 object-cover" src="${data.media}" alt="" />
 
         <div class="p-6">
+        <div class="flex pb-3 items-center mb-3">
+        <div id="pfimg" class="h-10 w-10 object-fill mr-3"><img src="${data.seller.avatar}" alt="avatar"></div>
+        <p class"px-1">${data.seller.name}</p>
+        </div>
         <h1 class="headline-text text-xl">${data.title}</h1>
         <h2 class="copytext text-xl">Description</h2>
         <p>${data.description}</p>
-        <div>${data.tags}</div>
+        <div><p>Tags: ${data.tags} </p></div>
         </div>
     
     </div>
@@ -83,6 +88,7 @@ const makeBidEndpoint = "api/v1/auction/listings/" + id + "/bids";
 const token = localStorage.getItem("accessToken");
 
 
+
 export async function bidOnListing(url, endpoint, bid) {
     console.log(bid);
     try {
@@ -99,7 +105,8 @@ export async function bidOnListing(url, endpoint, bid) {
         const json = await response.json();
         console.log(json);
         if (response.ok) {
-            console.log("it went well");
+            bidAmount.value = "";
+            bidSuccess.innerHTML = "Your bid was successfully added"
         } else {
         bidError.innerHTML = "You can only place a bid if it is higher than the current bid";
         }
@@ -110,7 +117,8 @@ export async function bidOnListing(url, endpoint, bid) {
 
 
 makeBid.addEventListener("click", (event) => {
-    console.log("button clicked");
+    bidSuccess.innerHTML = "";
+    bidError.innerHTML = "";
     const bid = Number(bidAmount.value.trim())
 
     const myBid = {

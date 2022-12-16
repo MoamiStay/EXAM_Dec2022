@@ -9,6 +9,9 @@ const description = document.querySelector("#listing-description");
 const deadline = document.querySelector("#listing-deadline");
 const tags = document.querySelector("#listing-tags");
 const postBtn = document.querySelector("#post-listing");
+const outMsg = document.querySelector("#outMsg");
+const success = document.querySelector("#form-sheet");
+const headline = document.querySelector("#headline");
 
 
 export async function createPost(url, endpoint, createdListing) {
@@ -23,13 +26,19 @@ export async function createPost(url, endpoint, createdListing) {
             body: JSON.stringify(createdListing),
         };
         const response = await fetch(url + endpoint, postData);
-        console.log(response);
+        // console.log(response);
         const json = await response.json();
         console.log(json);
         if (response.ok) {
-            console.log("you made a listing");
+        headline.innerHTML = "Yay!"
+        success.innerHTML = `
+        <div>
+        <p class="copytext">You successfully made a new listing</p>
+        <a href="../index.html" class="copytext text-xl underline block text-center">Go to homepage</a>
+        </div>
+        `;
         } else {
-        // bidError.innerHTML = "You can only place a bid if it is higher than the current bid";
+        outMsg.innerHTML = "Failed to upload new listing";
         }
     } catch (error) {
         console.log(error);

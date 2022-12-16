@@ -654,10 +654,6 @@ video {
   margin-top: 1.5rem;
 }
 
-.mb-60 {
-  margin-bottom: 15rem;
-}
-
 .block {
   display: block;
 }
@@ -935,6 +931,10 @@ video {
 
 .pt-1 {
   padding-top: 0.25rem;
+}
+
+.pb-60 {
+  padding-bottom: 15rem;
 }
 
 .text-left {
@@ -1216,10 +1216,6 @@ video {
 
   .md\:w-2\/4 {
     width: 50%;
-  }
-
-  .md\:w-3\/4 {
-    width: 75%;
   }
 
   .md\:w-8\/12 {

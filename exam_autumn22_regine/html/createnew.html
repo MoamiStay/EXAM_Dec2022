@@ -43,9 +43,9 @@
 
 <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="px-8 py-6 mt-4 text-left bg-white shadow-lg md:w-2/4 lg:w-1/3 sm:w-full">
-        <h3 class="text-2xl headline-text text-center mb-2">Create new listing</h3>
+        <h3 id="headline" class="text-2xl headline-text text-center mb-2">Create new listing</h3>
         <form action="">
-            <div class="mt-4 copytext">
+            <div id="form-sheet" class="mt-4 copytext">
                 <div>
                     <label class="block" for="Title">Title<label>
                             <input id="listing-title" type="text" placeholder="Title"
@@ -73,6 +73,7 @@
                             <input id="listing-tags" type="text" placeholder="Tags"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
+                <span id="outMsg" class="text-xs text-red-400"></span>
                 <div class="flex">
                     <button id="post-listing" class="text-white w-full px-6 py-2 mt-4 bg-blue-600 rounded-lg hover:bg-blue-900">Post
                         listing</button>

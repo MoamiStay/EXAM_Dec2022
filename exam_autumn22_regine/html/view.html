@@ -15,7 +15,7 @@
   </head>
 
   <body class="bg-body">
-    <main class="bg-main max-w-4xl mx-auto">
+    <main class="bg-main max-w-4xl mx-auto pb-60">
     <nav class="relative container mx-auto p-6">
       <div class="flex justify-between">
         <div class="pt-2 flex justify-between">
@@ -38,13 +38,14 @@
       </div>
     </nav>
     
-<section class="h-screen p-6 mb-60">
+<section class="h-screen px-6">
 <div id="output"></div>
 <div id="bidRestriction" class="flex">
        <input type="number" id="bid-amount" class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Bid amount" required>
        <a href="#"><button id="make-bid" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Bid</button></a>
 </div>
-<span id="bid-error" class="copytext text-xs text-red-400"></span>
+<span id="bid-error" class="copytext text-red-400"></span>
+<span id="bid-success" class="copytext text-xl"></span>
 </section>
 
     </main>

@@ -1,7 +1,6 @@
 import { apiUrl } from '../modules/urls.js';
 import { dates } from '../modules/output.js';
 import { year, day, month } from '../modules/output.js';
-// import { profileImg } from '../js/every-page.js';
 
 
 const user = localStorage.getItem("userName");
@@ -29,8 +28,6 @@ export async function getProfile(url, endpoint) {
         const json = await response.json();
         // console.log(json);
         if (response.ok) {
-            // myCredits.innerHTML = "Available credits: " + json.credits + " <i class='fa-solid fa-coins'>";
-            // username.innerHTML = json.name;
             const avatar = json.avatar;
             const credits = json.credits;
             const email = json.email;
