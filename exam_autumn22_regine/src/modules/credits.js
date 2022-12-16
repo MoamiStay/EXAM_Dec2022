@@ -21,8 +21,6 @@ export async function getCredits(user) {
         console.log(response);
         const json = await response.json();
         console.log(json);
-        //localStorage.setItem("credits", 1000)
-        //const credits = localStorage.getItem("credits")
     } catch (error) {
         console.log(error);
 };

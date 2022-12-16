@@ -6,9 +6,6 @@ Student: Regine Naas
 
 ![Gantt Chart](./submission/images/Gantt_regine.jpg?raw=true "Gantt Chart")
 
-********************
-
-# Badges
 
 ********************
 
@@ -21,15 +18,21 @@ preview: npm rum preview <br>
 
 # Also note
 
-HTML:   verification: <br>
-CSS:    verification: <br>
-WCAG:   ? <br>
+HTML:   verification: I have consistently been putting buttons inside a tags. (on index and view listing) But I didn't realize until too late and didn't have time to fix it. It also gives a warning about missing heading in "View listing", however the headning is added as the title of the listing being the h1 through js.
+WCAG:   ![Color-blind WCAG](./submission/images/colorblindWcag.jpg?raw=true "Color-blind WCAG")
+![Color contrast WCAG](./submission/images/colorContrast.jpg?raw=true "Color contrast WCAG")
+The light blue color is slightly lacking in contrast. Would adjust, but ran out of time.
 
-* issues with credits/avatar
-* styling is lacking (compared to figma file. Working with tailwind was more time-consuming than expected)
-* modules got confused
+* issues with credits/avatar. The page struggles to load avatar and credits. I should have made a better solution for saving and getting the avatar and credits. (It does work, just not most of the time..). I would rather try to create a function to store values in localstorage from the initial login, but I did not have time to redo this part. 
+* styling is lacking compared to the figma prototype. Working with tailwind was more time-consuming than expected.
+* modules got a bid confused and mixed up towards the end. It was due to poor planning prior to starting the implementation. Learned from mistakes and feel confident that I will provide more optimal code and usage of moduels in the future.
+* Ran out of time to set up any kind og testing.
 
-* all criteria is done, although not always executed optimally.
+* Hade some issues with setting up netlify due to the path to the index.html, so I setup the page manually by using local files. The hosted page is fully up to date with the most recent commit. 
+
+# Criteria
+
+All criteria is done, although not always executed optimally.
 
 1. A user with a stud.noroff.no email may register
 2. RU may login

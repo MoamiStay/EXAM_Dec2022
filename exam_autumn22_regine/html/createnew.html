@@ -9,8 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7298bdb0c3.js" crossorigin="anonymous"></script>
-    <script src="../src/js/every-page.js" type="module" defer></script>
-    <script src="../src/js/create-listing.js" type="module" defer></script>
     <title>Create listing</title>
   </head>
 
@@ -44,32 +42,32 @@
 <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="px-8 py-6 mt-4 text-left bg-white shadow-lg md:w-2/4 lg:w-1/3 sm:w-full">
         <h3 id="headline" class="text-2xl headline-text text-center mb-2">Create new listing</h3>
-        <form action="">
+        <form>
             <div id="form-sheet" class="mt-4 copytext">
                 <div>
-                    <label class="block" for="Title">Title<label>
+                    <label class="block" for="listing-title">Title</label>
                             <input id="listing-title" type="text" placeholder="Title"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <div class="mt-4">
-                    <label class="block" for="Image">Add image<label>
+                    <label class="block" for="listing-media">Add image</label>
                             <input id="listing-media" type="text" placeholder="Image"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <div class="mt-4">
-                    <label class="block" for="Description">Description<label>
+                    <label class="block" for="listing-description">Description</label>
                             <input id="listing-description" type="text" placeholder="Description"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <div class="mt-4">
-                    <label class="block">Deadline<label>
-                            <input type="datetime-local" id="listing-deadline" name="Deadline" placeholder="Deadline" value="" min="1" max="31"
+                    <label class="block" for="listing-deadline">Deadline</label>
+                            <input type="datetime-local" id="listing-deadline" name="Deadline" value="" min="2022-12-15T20:20" max="2024-01-01T20:20"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <span class="text-xs text-red-400"></span>
                                 
                 <div class="mt-4">
-                    <label class="block" for="Tags">Add tags<label>
+                    <label class="block" for="listing-tags">Add tags</label>
                             <input id="listing-tags" type="text" placeholder="Tags"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
@@ -93,5 +91,7 @@
       <p class="text-white p-3">Terms and Conditions</p>
       </div>
     </footer>
+      <script src="../src/js/every-page.js" type="module"></script>
+    <script src="../src/js/create-listing.js" type="module"></script>
   </body>
 </html>

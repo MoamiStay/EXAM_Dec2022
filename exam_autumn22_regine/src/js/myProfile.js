@@ -91,7 +91,7 @@ async function myListingsOut(out, listings) {
         <h2 class="text-xl copytext my-1.5">${item.title}</h2>
         <a href="#">
         </a>
-        <p class="mb-3 font-normal copytext text-gray-700 dark:text-gray-400">Ends: ${`${day}. ${month}, ${year}`}</p>
+        <p class="mb-3 font-normal copytext dark:text-gray-400">Ends: ${`${day}. ${month}, ${year}`}</p>
         <a href="../html/view.html?id=${item.id}"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View</button></a>
     </div>
 </div>

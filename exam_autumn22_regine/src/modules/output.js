@@ -47,7 +47,7 @@ export async function posts(out, listings) {
         <a href="#">
             <h5 class="mb-2 text-xl copytext font-bold tracking-tight text-gray-900 dark:text-white">Highest bid: ${highBid + ` <i class="fa-solid fa-coins"></i>`}</h5>
         </a>
-        <p class="mb-3 font-normal copytext text-gray-700 dark:text-gray-400">Ends: ${`${day}. ${month}, ${year}`}</p>
+        <p class="mb-3 font-normal copytext">Ends: ${`${day}. ${month}, ${year}`}</p>
         <a href="./html/view.html?id=${listings[i].id}"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View</button></a>
     </div>
 </div>
@@ -98,7 +98,7 @@ export async function filterPosts(out) {
         <a href="#">
             <h5 class="mb-2 text-xl copytext font-bold tracking-tight text-gray-900 dark:text-white">Highest bid: ${highBid + ` <i class="fa-solid fa-coins"></i>`}</h5>
         </a>
-        <p class="mb-3 font-normal copytext text-gray-700 dark:text-gray-400">Ends: ${`${day}. ${month}, ${year}`}</p>
+        <p class="mb-3 font-normal copytext">Ends: ${`${day}. ${month}, ${year}`}</p>
         <a href="./html/view.html?id=${allPosts[i].id}"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View</button></a>
     </div>
 </div>
@@ -114,7 +114,7 @@ export async function filterPosts(out) {
         <a href="#">
             <h5 class="mb-2 text-xl copytext font-bold tracking-tight text-gray-900 dark:text-white">Highest bid: ${highBid + ` <i class="fa-solid fa-coins"></i>`}</h5>
         </a>
-        <p class="mb-3 font-normal copytext text-gray-700 dark:text-gray-400">Ends: ${`${day}. ${month}, ${year}`}</p>
+        <p class="mb-3 font-normal copytext">Ends: ${`${day}. ${month}, ${year}`}</p>
         <a href="./html/view.html?id=${allPosts[i].id}"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View</button></a>
     </div>
 </div>
@@ -130,7 +130,7 @@ export async function filterPosts(out) {
         <a href="#">
             <h5 class="mb-2 text-xl copytext font-bold tracking-tight text-gray-900 dark:text-white">Highest bid: ${highBid + ` <i class="fa-solid fa-coins"></i>`}</h5>
         </a>
-        <p class="mb-3 font-normal copytext text-gray-700 dark:text-gray-400">Ends: ${`${day}. ${month}, ${year}`}</p>
+        <p class="mb-3 font-normal copytext">Ends: ${`${day}. ${month}, ${year}`}</p>
         <a href="./html/view.html?id=${allPosts[i].id}"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View</button></a>
     </div>
 </div>

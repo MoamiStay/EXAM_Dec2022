@@ -9,7 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7298bdb0c3.js" crossorigin="anonymous"></script>
-    <script src="../src/js/register.js" type="module" defer></script>
     <title>Homepage</title>
   </head>
 
@@ -27,33 +26,33 @@
 <div class="copytext flex items-center justify-center min-h-screen bg-gray-100">
     <div class="px-8 py-6 mx-4 mt-4 text-left bg-white shadow-lg md:w-2/4 lg:w-1/3 sm:w-full">
         <h3 class="headline-text text-2xl font-bold text-center mb-2">Join us</h3>
-        <form id="registration-form" action="">
+        <form id="registration-form">
             <div class="mt-4">
                 <div>
-                    <label class="block" for="Name">Username<label>
+                    <label class="block" for="username">Username</label>
                             <input type="text" id="username" placeholder="Name" 
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <span id="userError" class="text-xs text-red-400"></span>
                 <div class="mt-4">
-                    <label class="block" for="email">Email<label>
+                    <label class="block" for="email">Email</label>
                             <input type="text" id="email" placeholder="Email"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <span id="emailError" class="text-xs text-red-400"></span>
-                                    <label class="block" for="Name">Avatar<label>
+                                    <label class="block" for="avatar">Avatar</label>
                             <input type="text" id="avatar" placeholder="Img link"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <span id="avatarError" class="text-xs text-red-400"></span>
                 <div class="mt-4">
-                    <label class="block">Password<label>
+                    <label class="block" for="password">Password</label>
                             <input type="password" id="password" placeholder="Password"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <span id="passError" class="text-xs text-red-400"></span>
                 <div class="mt-4">
-                    <label class="block">Confirm Password<label>
+                    <label class="block" for="confPass">Confirm Password</label>
                             <input type="password" id="confPass" placeholder="Password"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
@@ -68,12 +67,9 @@
                         Log in
                     </a>
                 </div>
-            </div>
         </form>
     </div>
 </div>
-
-
     </main>
     <footer class="bg-darkRed max-w-4xl mx-auto sm:pb-24 md:pb-3">
       <p class="text-white p-3">Funded by Momis Nation 2022</p>
@@ -83,6 +79,7 @@
       <p class="text-white p-3">Terms and Conditions</p>
       </div>
     </footer>
+    <script src="../src/js/register.js" type="module"></script>
   </body>
 </html>
 
