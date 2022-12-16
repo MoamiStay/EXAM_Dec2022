@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../media/css/all.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7298bdb0c3.js" crossorigin="anonymous"></script>
+    <title>View Profile</title>
+  </head>
+
+  <body class="bg-body">
+    <main class="bg-main max-w-4xl mx-auto h-screen">
+    <nav class="relative container mx-auto p-6">
+      <div class="flex justify-between">
+        <div class="pt-2 flex justify-between">
+          <a href="../index.html"><img class="logo-size max-w-full" src="../media/img/logo.png" alt="Logo"></a>
+        </div>
+
+        <div class="hidden md:flex mx-3.5">
+        <span class="mx-3.5" id="credits">... <i class="fa-solid fa-coins"></i></span>
+        <a id="create-new" class="flex flex-col items-center px-5" href="../html/createnew.html"><i class="fa-solid fa-plus text-xl"></i></a>
+        <div id="pfimg" class="h-10 w-10 object-fill mx-3.5"></div>
+      </div>
+      </div>
+    </nav>
+
+    <nav class="md:hidden fixed inset-x-0 bottom-0 p-3 bg-brightRed text-white">
+      <div class="flex items-center justify-between px-3 py-4">
+        <a href="../html/createnew.html" class="flex flex-col items-center"><i class="fa-solid fa-circle-plus text-2xl p-3"></i></a>
+        <a href="../index.html" class="flex flex-col items-center"><i class="fa-solid fa-house text-2xl"></i></a>
+        <div id="pfimg-mob" class="md:hidden h-10 w-10 object-fill mx-3.5"></div>
+      </div>
+    </nav>
+    
+<section id="profile-section" class="p-6">
+  <div>
+    <h1 class="headline-text text-2xl block text-center">Profile</h1>
+  </div>
+  <div class="flex justify-between">
+    <div>
+      <div id="current-avatar" class="h-24 w-24 object-cover"></div>
+      <button id="edit-avatar" class="copytext">Edit avatar</button>
+      <div id="new-avatar" class="hidden">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+          <div class="flex copytext">
+            <input type="text" id="img-link" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Img link" required>
+              <button
+                  type="button"
+                  id="save-avatar"
+                  class="text-white mx-2 inline-block px-7 py-3 bg-blue-600 font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                  > Save
+              </button>
+              <button
+              type="button"
+              id="cancel"
+              class="text-white inline-block px-7 py-3 bg-blue-600 font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+            >Cancel
+            </button>
+          </div>
+        </div>
+    </div>
+    <div class="copytext text-xl">
+      <p id="username">Username</p>
+      <p id="email">Email</p>
+      <p id="my-credits">Available credits</p>
+    </div>
+  </div>
+</section>
+<section class="p-6">
+  <h2 class="py-4 headline-text text-2xl">My listings</h2>
+  <div id="my-listings" class="grid md:grid-cols-3 gap-4"><img id="spinner" src="../media/spinner/spinner.gif" alt="spinner"></div>
+</section>
+
+    </main>
+    <footer class="bg-darkRed max-w-4xl mx-auto sm:pb-24 md:pb-3">
+      <p class="text-white p-3">Funded by Momis Nation 2022</p>
+      <p class="text-white p-3">Contact us: email@email.com</p>
+      <div class="flex justify-center">
+      <p class="text-white p-3">Privacy Policy </p>
+      <p class="text-white p-3">Terms and Conditions</p>
+      </div>
+    </footer>
+    <script src="../src/js/myProfile.js" type="module"></script>
+    <script src="../src/js/change-avatar.js" type="module"></script>
+    <script src="../src/js/every-page.js" type="module"></script>
+  </body>
+</html>

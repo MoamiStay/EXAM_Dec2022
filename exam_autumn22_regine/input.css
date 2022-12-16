@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bananvann {
+    color: #8B4044;
+}
+
+.headline-text {
+    font-family: 'DM Serif Display', serif;
+}
+
+.copytext {
+    font-family: 'EB Garamond', serif;
+}
+
+.logo-size {
+    max-width: 150px;
+}
+
+.half-size {
+    max-width: 40%;
+}
