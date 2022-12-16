@@ -20,8 +20,8 @@ preview: npm rum preview <br>
 
 HTML:   verification: I have consistently been putting buttons inside a tags. (on index and view listing) But I didn't realize until too late and didn't have time to fix it. It also gives a warning about missing heading in "View listing", however the headning is added as the title of the listing being the h1 through js.
 WCAG:   ![Color-blind WCAG](./submission/images/colorblindWcag.jpg?raw=true "Color-blind WCAG")
-![Color contrast WCAG](./submission/images/colorContrast.jpg?raw=true "Color contrast WCAG")
-The light blue color is slightly lacking in contrast. Would adjust, but ran out of time.
+![Color contrast WCAG](./submission/images/colorContrast.jpg?raw=true "Color contrast WCAG") <br>
+The light blue color that is primerely used on buttons is slightly lacking in contrast. Would adjust, but ran out of time.
 
 * issues with credits/avatar. The page struggles to load avatar and credits. I should have made a better solution for saving and getting the avatar and credits. (It does work, just not most of the time..). I would rather try to create a function to store values in localstorage from the initial login, but I did not have time to redo this part. 
 * styling is lacking compared to the figma prototype. Working with tailwind was more time-consuming than expected.
@@ -54,9 +54,7 @@ All criteria is done, although not always executed optimally.
 Figma:                           https://www.figma.com/file/2qmH9vKsK4TnIK6BahmGE2/Exam_Autumn22_Auction?node-id=0%3A1&t=1YxQiFVTlD3YEDeb-1<br>
 Trello board:                    https://github.com/users/MoamiStay/projects/2/views/1 <br>
 GITHUB REPO:                     https://github.com/MoamiStay/Exam_Autumn22_AUCTION/tree/production <br>
-MAIN branch - Netlify:           https://auction-main.netlify.app <br>
-PRODUCTION branch - Netlify:     https://auction-production.netlify.app <br>
-
+MAIN branch - Netlify:           https://exam-auction-regine.netlify.app/ <br>
 
 ********************
 
@@ -68,5 +66,5 @@ painintg of birds: https://unsplash.com/photos/ddKNTAwZu3k
 feather png: preowned; bought license (lost the link.. )
 
 Typography:
-https://www.fontspace.com/magilio-font-f61812
+https://www.fontspace.com/magilio-font-f61812 <br>
 https://themeui.net/migha-free-variable-font/
