@@ -4,7 +4,15 @@ Student: Regine Naas
 
 ********************
 
-![Bidwell](./submission/images/Gantt_regine.jpg?raw=true "Bidwell")
+![Bidwell](./public/bidwellReadme.png "Bidwell")
+
+********************
+
+# Links
+
+[Figma](https://www.figma.com/file/2qmH9vKsK4TnIK6BahmGE2/Exam_Autumn22_Auction?node-id=0%3A1&t=1YxQiFVTlD3YEDeb-1 "Figma")  
+[Trello board](https://github.com/users/MoamiStay/projects/2/views/1 "Trello board")  
+[Netlify - Hosted page](https://exam-auction-regine.netlify.app/ "Bidwell")  
 
 ********************
 
@@ -33,7 +41,7 @@ The light blue color that is primerely used on buttons is slightly lacking in co
 
 * Hade some issues with setting up netlify due to the path to the index.html, so I setup the page manually by using local files. The hosted page is fully up to date with the most recent commit. 
 
-# Criteria
+# Project criteria
 
 All criteria is done, although not always executed optimally.
 
@@ -48,16 +56,6 @@ All criteria is done, although not always executed optimally.
 9. RU may get credit by getting a successful Bid on their Listing.
 10. RU may use credit to make a Bid on anothers user's Listing.
 11. A user (registered or not) may search through Listings.
-
-
-********************
-
-# Links
-
-Figma:                           https://www.figma.com/file/2qmH9vKsK4TnIK6BahmGE2/Exam_Autumn22_Auction?node-id=0%3A1&t=1YxQiFVTlD3YEDeb-1<br>
-Trello board:                    https://github.com/users/MoamiStay/projects/2/views/1 <br>
-GITHUB REPO:                     https://github.com/MoamiStay/Exam_Autumn22_AUCTION/tree/production <br>
-MAIN branch - Netlify:           https://exam-auction-regine.netlify.app/ <br>
 
 ********************
 
