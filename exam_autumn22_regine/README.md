@@ -4,17 +4,20 @@ Student: Regine Naas
 
 ********************
 
-![Gantt Chart](./submission/images/Gantt_regine.jpg?raw=true "Gantt Chart")
-
+![Bidwell](./submission/images/Gantt_regine.jpg?raw=true "Bidwell")
 
 ********************
 
 # Setup
+Copy repo:  
+git clone git@github.com:MoamiStay/EXAM_Dec2022.git  
 
-npm i <br>
-build: npm run build <br>
-preview: npm rum preview <br>
+npm i  
+npm run build  
+npm rum preview  
 
+# Planning
+![Gantt Chart](./submission/images/Gantt_regine.jpg?raw=true "Gantt Chart")
 
 # Also note
 
